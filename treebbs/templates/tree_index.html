@@ -1,0 +1,75 @@
+<link rel="stylesheet" type="text/css" href="treebbs.css">
+<div style="text-align:center;" >
+<h2><{$bbs_title}></h2>
+<div style="text-align:center;">
+<{$bbs_desc}>
+</div>
+<{$bbs_memo}><br>
+今日：<{$count_today}> 昨日：<{$count_yest}> 合計：<{$count_total}>
+</div><br>
+<div class="thead" style="text-align:center;">
+  <a href="<{$my_self}>?mode=form" class="link1">新規投稿</a>　
+  ｜　<a href="<{$my_self}>?mode=tree" class="link1">ツリー</a>　
+  ｜　<a href="<{$my_self}>?mode=expn" class="link1">スレッド</a>　
+  ｜　<a href="<{$my_self}>?mode=root" class="link1">タイトル</a>　
+  ｜　<a href="<{$my_self}>?mode=dump" class="link1">一覧</a>　
+  ｜　<a href="<{$my_self}>?mode=search" class="link1">検索</a>　
+  ｜　<a href="<{$my_self}>?mode=setup" class="link1">設定</a>　
+</div>
+<br>
+<{if $page_mode!=""}>
+<div style="text-align:center;">[
+<{if $pre_page < 0 }>
+  前のページなし
+<{else}>
+  <a href="index.php?mode=<{$page_mode}>&amp;page=<{$pre_page}>" class="link1">前の<{$page_max}>件</a>
+<{/if}>
+|&nbsp;&nbsp;<{$this_page}>/<{$page_count}>ページ&nbsp;&nbsp;|
+<{if $next_page > 0 }>
+  <a href="index.php?mode=<{$page_mode}>&amp;page=<{$next_page}>" class="link1">次の<{$page_max}>件</a>
+<{else}>
+  次のページなし
+<{/if}>
+ ]</div>
+ <{/if}>
+<hr size="1">
+<{if $post_desc!=""}>
+<fieldset>
+<legend class="blockTitle">投稿に関しての注意事項</legend>
+<div style="padding:4px;">
+<{$post_desc}>
+</div>
+</fieldset>
+<{/if}>
+<{$contents}>
+
+<hr size="1">
+
+<{if $page_mode!=""}>
+<div style="text-align:center;">[
+<{if $pre_page < 0 }>
+  前のページなし
+<{else}>
+  <a href="index.php?mode=<{$page_mode}>&amp;page=<{$pre_page}>" class="link1">前の<{$page_max}>件</a>
+<{/if}>
+|&nbsp;&nbsp;<{$this_page}>/<{$page_count}>ページ&nbsp;&nbsp;|
+<{if $next_page > 0 }>
+  <a href="index.php?mode=<{$page_mode}>&amp;page=<{$next_page}>" class="link1">次の<{$page_max}>件</a>
+<{else}>
+  次のページなし
+<{/if}>
+ ]</div>
+ <{/if}>
+<br>
+<div class="thead" style="text-align:center;">
+  <a href="<{$my_self}>?mode=form" class="link1">新規投稿</a>　
+  ｜　<a href="<{$my_self}>?mode=tree" class="link1">ツリー</a>　
+  ｜　<a href="<{$my_self}>?mode=expn" class="link1">スレッド</a>　
+  ｜　<a href="<{$my_self}>?mode=root" class="link1">タイトル</a>　
+  ｜　<a href="<{$my_self}>?mode=dump" class="link1">一覧</a>　
+  ｜　<a href="<{$my_self}>?mode=search" class="link1">検索</a>　
+  ｜　<a href="<{$my_self}>?mode=setup" class="link1">設定</a>　
+</div>
+<br>
+<!-- 以下のレッツPHPさんへのリンクは削除禁止 -->
+<p style="text-align:right;"><small><a href="http://php.s3.to/" class="link1">レッツPHP!</a></small></p>

@@ -1,0 +1,16 @@
+<div style="margin:14px;padding:8px;" class="tbody">
+<br>
+<{foreach item=val from=$tree}>
+<{section name=i loop=$val}>
+<{if $val[i].nest==0}>
+<div>¢¡¡Ý
+<{else}>
+<div style="margin-left:<{$val[i].nest}>em;" class="tbody">¡Ü¡Ý
+<{/if}>
+  <a href="index.php?mode=view&amp;vid=<{$val[i].tid}>" class="link1"><{$val[i].subject}></a>
+  &nbsp;&nbsp;[&nbsp;<{$val[i].name}>&nbsp;]&nbsp;&nbsp;<{$val[i].time}>
+</div>
+<{/section}>
+<br>
+<{/foreach}>
+</div>

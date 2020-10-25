@@ -1,0 +1,20 @@
+<div style="margin:14px;">
+<{foreach item=val from=$tree}>
+  <{section name=i loop=$val}>
+    <div>
+    <div class="thead">[<{$val[i].tid}>]&nbsp;<strong><{$val[i].subject}></strong></div>
+    <div style="padding:4px;" class="tbody">
+    <div style="font-size:11px;">名　　前：<{$val[i].name}><br>
+    投稿日時：<{$val[i].time}></div><br>
+    <div><{$val[i].post}></div>
+    <div style="text-align:right; font-size:12px;">
+    <a href="index.php?mode=res&amp;vid=<{$val[i].tid}>">返信</a>&nbsp;&nbsp;
+    <{if $uid==$val[i].uid}>
+    <a href="index.php?mode=edit&amp;vid=<{$val[i].tid}>">編集</a>
+    <{/if}>
+    </div>
+    </div><br>
+  <{/section}>
+<{/foreach}>
+
+</div>

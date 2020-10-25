@@ -1,0 +1,29 @@
+<table cellpadding="3" cellspacing="1" width="60%" align="center" class="brdr">
+  <tr>
+    <td class=bgb align=center>
+      <font size=3><b>[ 環境設定 ]</b></font>
+    </td>
+  </tr>
+  <tr><td class=bgc align=center><br>
+  <form method=post action='$PHP_SELF'>
+  <input type=hidden name=act value='setup_cookie'>
+   <table width=100%><tr><td>デフォルトの表示モード  </td><td>
+   <select name=view style='background-color:#eee;color:#444;'>
+     <option value=tree$tree>ツリー表示</option>
+     <option value=expn$expn>展開表示</option>
+     <option value=root$root>タイトル表示</option>
+     <option value=dump$dump>一覧表示</option>
+   </select>
+    </td></tr><tr><td colspan=2><hr size=1></td></tr>
+    <tr><td>ツリー表示時の１ページの表示数</td>
+    <td><input type=text name=pagetree size=8 value=$this->page_tree></td></tr>
+    <tr><td>展開表示時の１ページの表示数</td>
+    <td><input type=text name=pageexpn size=8 value=$this->page_expn></td></tr>
+    <tr><td>タイトル表示時の１ページの表示数</td>
+    <td><input type=text name=pageroot size=8 value=$this->page_root></td></tr>
+    <tr><td>一覧表示時の１ページの表示数</td>
+    <td><input type=text name=pagedump size=8 value=$this->page_dump></td></tr>
+    <tr><td colspan=2><hr size=1></td></tr>
+    <tr><td colspan=2 align=center><input type=submit class=submit value='  設定  ' class=submit>
+    </td></tr></table>
+   </form></td></tr></table>

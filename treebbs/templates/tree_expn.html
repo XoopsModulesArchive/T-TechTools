@@ -1,0 +1,33 @@
+<div style="margin:14px;padding:8px;">
+<div class="thead">
+<{counter start=0 skip=1 print=false}>
+<{section name=i loop=$headh}>
+<{counter}>:<a href="#j<{$headh[i].tid}>" class="link1"><{$headh[i].sub}></a>&nbsp;&nbsp;
+<{/section}>
+</div>
+<br>
+<div>
+<{foreach item=val from=$tree}>
+  <{section name=i loop=$val}>
+    <{if $val[i].nest==0}>
+      <div class="tbody">
+      <div class="thead"><strong><{$val[i].subject}></strong><a name="j<{$val[i].tid}>">&nbsp;</a></div>
+      <div style="padding:4px;font-size:11px;" class="tbody">名　　前：<{$val[i].name}><br>投稿日時：<{$val[i].time}></div><br>
+      <div class="tbody" style="padding:8px;">
+    <{else}>
+      <div class="tbody" style="padding:8px;">
+      <div class="tbody"><strong><{$val[i].subject}></strong></div>
+      <div style="font-size:11px;" class="tbody">名　　前：<{$val[i].name}><br>投稿日時：<{$val[i].time}></div><br>
+    <{/if}>
+    <div class="tbody"><{$val[i].post}></div>
+    <div style="text-align:right; font-size:12px;" class="tbody">
+    <a href="index.php?mode=res&amp;vid=<{$val[i].tid}>">返信</a>&nbsp;&nbsp;
+    <{if $uid==$val[i].uid}>
+    <a href="index.php?mode=edit&amp;vid=<{$val[i].tid}>">編集</a>
+    <{/if}>
+    </div>
+    <hr></div>
+  <{/section}>
+  </div><br>
+<{/foreach}></div>
+</div>

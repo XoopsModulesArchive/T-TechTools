@@ -1,0 +1,14 @@
+<div style="margin:14px;">
+  <div><div class="thead">[<{$tid}>]&nbsp;<{$subject}></div>
+  <div class="tbody" style="padding:8px;">
+  <div style="font-size:11px;">名　　前：<{$name}><br>
+  投稿日時：<{$time}></div><br>
+  <div><{$post}></div>
+  <div style="text-align:right; font-size:12px;">
+  <a href="index.php?mode=res&amp;vid=<{$tid}>">返信</a>&nbsp;&nbsp;
+  <{if $fedit==true}>
+  <a href="index.php?mode=edit&amp;vid=<{$tid}>">編集</a>
+  <{/if}>
+  </div>
+  </div>
+</div>
